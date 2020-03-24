@@ -29,7 +29,7 @@ def run_and_mark_audio():
     track = Audio(vlc.MediaPlayer(r'C:\Users\IanHi\OneDrive - University of Waterloo\Music\Music\Live Snarky '
                                   '- November 22, 2019 - Paris, France -MP3\Snarky Puppy - LIVE SNARKY - November '
                                   '22, 2019 - Paris, France  - 08 - Chonks.mp3'))
-    data_entry = {'name': track.name, 'piano': {'enters': [], 'exits': []}, 'guitar': []}
+    data_entry = {'name': track.name, 'piano': [], 'guitar': []}
     print('Note: This program assumes a 1 second delay between audio and associated keypress, for example, if drums '
           'start playing, please aim to press "d" as close to 1 second later as possible.')
 
@@ -58,7 +58,6 @@ def run_and_mark_audio():
     root_window.bind('<KeyPress>', key_pressed)
     root_window.mainloop()
 
-    # TODO: Wait till end of tune to get length or find some other way of getting song length
 
     print(data_entry)
 
