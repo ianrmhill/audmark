@@ -1,0 +1,19 @@
+Dependencies:
+A couple basic Python libraries listed in the requirements.txt file for pip loading, need VLC player installed on your computer (not yet tested on Linux).
+
+Usage:
+Currently just paste in the MP3 file path into the 'main' function, will load the audio. Press space to play/pause, binded keys to mark each instrument.
+Each time an instrument key is pressed, a time marker (in milliseconds) is added to the data structure, current time - 1 second.
+
+Once the song finishes, close the pop-up window to have the data structure printed to screen (TODO: save to database instead).
+
+Todo:
+
+Add tracker of whether each instrument is currently playing, adding markers in the data structure for entrances and exits.
+Currently data structure is just an array of each time the key is pressed. However, this may be easier to consume for net training.
+
+I was planning on hooking this into MongoDB or similar, add button or feature to save the marked timestamps data structure to the database.
+This database could then be consumed by the neural net training routine
+
+Another nice to have would be the ability to run through a track multiple times, since if it's complicated it may be tough to get all markers the first time.
+
